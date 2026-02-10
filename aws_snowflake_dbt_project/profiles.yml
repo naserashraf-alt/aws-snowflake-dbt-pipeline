@@ -1,0 +1,26 @@
+aws_snowflake_dbt_project:
+  outputs:
+    dev:
+      account: EUPNNLW-FUC67005
+      database: "\tairbnb"
+      password: NASer$$0244545816
+      role: ACCOUNTADMIN
+      schema: dbt_schema
+      threads: 1
+      type: snowflake
+      user: naser
+      warehouse: COMPUTE_WH
+  target: dev
+default:
+  outputs:
+    dev:
+      auth: NONE
+      connect_timeout: 30
+      host: hive
+      method: thrift
+      port: 10000
+      retries: 3
+      schema: default
+      type: spark
+      user: root
+  target: dev
